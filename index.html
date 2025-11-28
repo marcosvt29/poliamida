@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Moderno SVG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-wrap">
+
+    <!-- HEADER -->
+    <header class="header">
+        <img src="fachada.png" class="header-img">
+    </header>
+
+    <!-- TOP MENU -->
+    <div class="top-bar">
+        <button id="openMedidas" class="top-btn">
+            <svg><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> Medidas
+        </button>
+
+        <button id="openEspecificacoes" class="top-btn">
+            <svg><path d="M4 4l16 8-16 8z"/></svg> Malha
+        </button>
+
+        <button id="openPrazo" class="top-btn">
+            <svg><path d="M3 13h2l1 2h11v-2h2v6H3z"/></svg> Prazo
+        </button>
+
+        <button id="openTamanhos" class="top-btn">
+            <svg><path d="M4 20l8-16 8 16z"/></svg> Tamanhos
+        </button>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="searchBox">
+        <input id="searchInput" placeholder="Buscar produto...">
+    </div>
+
+    <div class="title-center">Catálogo de Camisetas</div>
+
+    <!-- GRID -->
+    <section id="prodGrid" class="grid"></section>
+    <div id="emptyState" class="empty">Nenhum produto encontrado.</div>
+
+</div>
+
+<!-- BOTÃO WHATSAPP -->
+<div class="fab" id="waFab">📲</div>
+
+<!-- MODAL -->
+<div id="modalBase" class="modal">
+    <div class="modal-box">
+        <span class="close" id="modalClose">×</span>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
