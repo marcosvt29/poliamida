@@ -21,17 +21,21 @@ body{
 
 /* HEADER */
 .header{
-  position:fixed;
-  left:50%;
-  transform:translateX(-50%);
-  top:0;
-  width:var(--width);
-  z-index:40;
-  overflow:hidden;
-  border-radius:14px 14px 14px 14px;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--width);
+  z-index: 40;
+  overflow: hidden;
+  border-radius: 14px 14px 14px 14px;
   background:#093483;
-  margin-top: 10px;
 }
+
+
+
+
 .header-img{
   width:100%;
   height:auto;
@@ -41,13 +45,21 @@ body{
 
 /* TOP BAR */
 .top-bar{
-  width:100%;
-  display:flex;
-  gap:0px;
-  justify-content:space-between;
-  padding:2px;
-  margin-top:80px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 2px;
+  margin-top: 100px; /* altura do header */
 }
+
+@media(max-width: 500px){
+  .top-bar{
+     margin-top: 150px; /* ajusta para celulares menores */
+  }
+}
+
+
 .top-btn{
   flex:1;
   background:white;
