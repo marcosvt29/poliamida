@@ -5,8 +5,8 @@ const PRODUCTS = [
   {id:2,name:'Camiseta Vermelha',price:'R$ 49,90',img:'imagens/02.png',sizes:['P','M','G']},
   {id:3,name:'Camiseta Violeta',price:'R$ 49,90',img:'imagens/03.png',sizes:['P','M']},
   {id:4,name:'Camiseta Rosa',price:'R$ 49,90',img:'imagens/04.png',sizes:['P','M','G']},
-   {id:5,name:'Camiseta Laranja',price:'R$ 49,90',img:'imagens/05.png',sizes:['P','M','G']},
-   {id:6,name:'Camiseta Preta',price:'R$ 49,90',img:'imagens/06.png',sizes:['P','M','G']}
+  {id:5,name:'Camiseta Laranja',price:'R$ 49,90',img:'imagens/05.png',sizes:['P','M','G']},
+  {id:6,name:'Camiseta Preta',price:'R$ 49,90',img:'imagens/06.png',sizes:['P','M','G']}
 ];
 
 const grid     = document.getElementById('prodGrid');
@@ -16,6 +16,16 @@ const modal    = document.getElementById('modalBase');
 const modalBox = document.querySelector('.modal-box');
 const modalContent = document.getElementById('modalContent');
 const modalClose = document.getElementById('modalClose');
+
+/* AUTO AJUSTAR MENU */
+const header = document.getElementById("header");
+const topBar = document.querySelector(".top-bar");
+
+function ajustarMenu(){
+    topBar.style.marginTop = header.offsetHeight + 10 + "px";
+}
+window.addEventListener("load", ajustarMenu);
+window.addEventListener("resize", ajustarMenu);
 
 /* RENDER PRODUCTS */
 function renderProducts(list){
@@ -59,7 +69,7 @@ function hideModal(){
 modalClose.onclick = hideModal;
 modal.onclick = e => { if(e.target === modal) hideModal(); };
 
-/* TOP BUTTON MODALS */
+/* TOP MENU MODALS */
 document.getElementById('openMedidas').onclick = () => {
   showModal(`
     <h2>Tabela de Medidas</h2>
@@ -78,19 +88,19 @@ document.getElementById('openEspecificacoes').onclick = ()=>{
   showModal(`
     <h2>Especificações da Malha</h2>
     <p>• Composição: 100% Poliamida</p>
-      <p>• Tecnologia DRY </p>
-     <p>• Tecnologia Smart Clothes</p>
-    <p>• Toque macio e confortável</p>
-    <p>• Secagem rápida e respirável</p>
-    <p>• Não desbota e não cria bolinhas</p>
+    <p>• Tecnologia DRY</p>
+    <p>• Smart Clothes</p>
+    <p>• Toque macio</p>
+    <p>• Secagem rápida</p>
+    <p>• Não desbota, não cria bolinhas</p>
   `);
 };
 
 document.getElementById('openPrazo').onclick = ()=>{
   showModal(`
     <h2>Prazo de Entrega</h2>
-    <p>Entrega em <strong>7 a 10 dias úteis</strong>, dependendo da região.</p>
-    <p>Enviamos o código de rastreio pelo WhatsApp.</p>
+    <p>Entrega em <strong>7 a 10 dias úteis</strong></p>
+    <p>Rastreio enviado pelo WhatsApp.</p>
   `);
 };
 
@@ -105,19 +115,17 @@ document.getElementById('openTamanhos').onclick = ()=>{
 function openProductModal(p){
   showModal(`
     <h2>${p.name}</h2>
-    
-<img src="${p.img}"
-     style="
-        width:100%;
-        height:auto;
-        max-height:70vh;
-        object-fit:contain;
-        border-radius:12px;
-        background:#fff;
-        margin:10px 0;
-     ">
 
-
+    <img src="${p.img}"
+         style="
+            width:100%;
+            height:auto;
+            max-height:70vh;
+            object-fit:contain;
+            border-radius:12px;
+            background:white;
+            margin:10px 0;
+         ">
 
     <p><strong>Preço:</strong> ${p.price}</p>
     <p><strong>Tamanhos:</strong> ${p.sizes.join(' • ')}</p>
