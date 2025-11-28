@@ -1,7 +1,7 @@
 const WHATSAPP_NUMBER = '5551991303697';
 
 const PRODUCTS = [
-  {id:1,name:'Camiseta Azul Royal',price:'R$ 49,90',img:'imagens/01.png',sizes:['P','M','G']},
+  {id:1,name:'Camiseta Azul Savoia',price:'R$ 49,90',img:'imagens/01.png',sizes:['P','M','G']},
   {id:2,name:'Camiseta Vermelha',price:'R$ 49,90',img:'imagens/02.png',sizes:['P','M','G']},
   {id:3,name:'Camiseta Violeta',price:'R$ 49,90',img:'imagens/03.png',sizes:['P','M']},
   {id:4,name:'Camiseta Rosa',price:'R$ 49,90',img:'imagens/04.png',sizes:['P','M','G']},
