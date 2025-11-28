@@ -78,6 +78,8 @@ document.getElementById('openEspecificacoes').onclick = ()=>{
   showModal(`
     <h2>Especificações da Malha</h2>
     <p>• Composição: 100% Poliamida</p>
+      <p>• Tecnologia DRY </p>
+     <p>• Tecnologia Smart Clothes</p>
     <p>• Toque macio e confortável</p>
     <p>• Secagem rápida e respirável</p>
     <p>• Não desbota e não cria bolinhas</p>
